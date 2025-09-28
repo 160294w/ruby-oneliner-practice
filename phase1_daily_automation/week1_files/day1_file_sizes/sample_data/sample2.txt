@@ -1,0 +1,5 @@
+This is sample file 2.
+It has multiple lines.
+For demonstrating file size calculations.
+Line 4
+Line 5
