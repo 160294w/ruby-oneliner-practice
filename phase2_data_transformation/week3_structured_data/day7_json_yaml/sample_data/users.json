@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "田中太郎",
+    "email": "tanaka@example.com",
+    "age": 32,
+    "department": "開発",
+    "profile": {
+      "skills": ["Ruby", "JavaScript", "Docker"],
+      "experience_years": 5,
+      "certification": ["AWS Solutions Architect", "Ruby Association Certified Programmer"]
+    },
+    "projects": [
+      {"name": "ECサイトリニューアル", "role": "テックリード"},
+      {"name": "API基盤構築", "role": "バックエンドエンジニア"}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "佐藤花子",
+    "email": "sato@example.com",
+    "age": 28,
+    "department": "フロントエンド",
+    "profile": {
+      "skills": ["React", "TypeScript", "CSS"],
+      "experience_years": 3,
+      "certification": ["Google UX Design Certificate"]
+    },
+    "projects": [
+      {"name": "管理画面UI改善", "role": "フロントエンドエンジニア"},
+      {"name": "デザインシステム構築", "role": "UI/UXデザイナー"}
+    ]
+  },
+  {
+    "id": 3,
+    "name": "鈴木一郎",
+    "email": "suzuki@example.com",
+    "age": 35,
+    "department": "インフラ",
+    "profile": {
+      "skills": ["Kubernetes", "Terraform", "AWS", "監視・運用"],
+      "experience_years": 8,
+      "certification": ["CKA", "AWS DevOps Engineer Professional"]
+    },
+    "projects": [
+      {"name": "クラウド移行プロジェクト", "role": "インフラエンジニア"},
+      {"name": "CI/CD基盤構築", "role": "DevOpsエンジニア"}
+    ]
+  },
+  {
+    "id": 4,
+    "name": "高橋美咲",
+    "email": "takahashi@example.com",
+    "age": 26,
+    "department": "QA",
+    "profile": {
+      "skills": ["自動テスト", "Selenium", "Jest"],
+      "experience_years": 2,
+      "certification": ["JSTQB Foundation Level"]
+    },
+    "projects": [
+      {"name": "テスト自動化導入", "role": "QAエンジニア"}
+    ]
+  }
+]

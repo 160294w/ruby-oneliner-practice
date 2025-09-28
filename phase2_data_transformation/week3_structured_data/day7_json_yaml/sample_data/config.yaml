@@ -1,0 +1,40 @@
+application:
+  name: "Ruby Practice App"
+  version: "2.0.0"
+  environment: "development"
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "practice_dev"
+  pool: 5
+  timeout: 5000
+
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+
+features:
+  logging: true
+  caching: false
+  debug: true
+  rate_limiting: false
+
+external_apis:
+  weather_api:
+    url: "https://api.weather.com"
+    api_key: "${WEATHER_API_KEY}"
+    timeout: 30
+  payment_gateway:
+    url: "https://api.payment.com"
+    merchant_id: "${MERCHANT_ID}"
+    timeout: 60
+
+monitoring:
+  metrics:
+    enabled: true
+    interval: 60
+  alerts:
+    email: "admin@example.com"
+    slack_webhook: "${SLACK_WEBHOOK_URL}"
