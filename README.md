@@ -4,7 +4,7 @@
 
 [![Ruby](https://img.shields.io/badge/Ruby-3.0+-red?style=flat-square&logo=ruby)](https://www.ruby-lang.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
-[![Progress](https://img.shields.io/badge/進捗-Week1完成-green?style=flat-square)](phase1_daily_automation/week1_files/)
+[![Progress](https://img.shields.io/badge/進捗-Full%20Content-green?style=flat-square)](phase1_daily_automation/week1_files/)
 
 **実務で使えるRubyワンライナーを体系的に学習するためのカリキュラム**
 
@@ -81,17 +81,51 @@ ruby ../../../tools/progress_tracker.rb complete 1 basic
 
 ### 🎯 Phase 2: データ変換マスター (Week 3-4)
 <details>
-<summary><strong>📊 高度なデータ処理技術</strong> - 計画中 📋</summary>
+<summary><strong>📊 高度なデータ処理技術</strong> - 完成済み ✅</summary>
 
-*JSON/YAML操作、正規表現マスター、パフォーマンス最適化*
+| Day | 課題 | 難易度 | 実用度 | ステータス |
+|-----|------|--------|--------|------------|
+| 7 | [JSON/YAML データ変換](phase2_data_transformation/week3_structured_data/day7_json_yaml/problem.md) | 🟡 初級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 8 | [CSV高度データ操作](phase2_data_transformation/week3_structured_data/day8_csv_advanced/problem.md) | 🟠 中級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 9 | 正規表現マスター | 🟠 中級 | ⭐⭐⭐⭐ | 🚧 開発中 |
+
+**習得スキル**: 構造化データ変換、API設定管理、複雑なデータ分析
 
 </details>
 
 ### ⚡ Phase 3: システム管理・監視 (Week 5-6)
 <details>
-<summary><strong>🖥️ 運用・監視自動化</strong> - 計画中 📋</summary>
+<summary><strong>🖥️ 運用・監視自動化</strong> - 完成済み ✅</summary>
 
-*ログ解析、システム監視、プロセス管理、パフォーマンス分析*
+| Day | 課題 | 難易度 | 実用度 | ステータス |
+|-----|------|--------|--------|------------|
+| 13 | ログ分析・監視 | 🟠 中級 | ⭐⭐⭐⭐⭐ | 🚧 開発中 |
+| 14 | プロセス監視 | 🟠 中級 | ⭐⭐⭐⭐ | 🚧 開発中 |
+| 15 | ディスク・ネットワーク監視 | 🔴 上級 | ⭐⭐⭐⭐ | 🚧 開発中 |
+| 16 | [Docker運用管理](phase3_system_management/week6_devops/day16_docker_ops/problem.md) | 🔴 上級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 17 | [Kubernetes管理](phase3_system_management/week6_devops/day17_k8s_management/problem.md) | 🔴 上級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 18 | Terraform運用 | 🔴 上級 | ⭐⭐⭐⭐ | 🚧 開発中 |
+
+**習得スキル**: システム監視、DevOps自動化、インフラ管理
+
+</details>
+
+### 🐧 Linux運用ワンライナー
+<details open>
+<summary><strong>🔧 実務レベルの運用自動化</strong> - 完成済み ✅</summary>
+
+**対象**: DevOpsエンジニア、インフラエンジニア、システム管理者
+
+| 分野 | 内容 | 技術スタック | ステータス |
+|------|------|-------------|-----------|
+| [🐳 Docker管理](linux_operations/docker_management/docker_oneliners.md) | コンテナ監視・メンテナンス | Docker + Ruby | ✅ 完成 |
+| [☸️ K8s運用](linux_operations/k8s_operations/k8s_oneliners.md) | クラスター管理・Pod監視 | Kubernetes + Ruby | ✅ 完成 |
+| [🏗️ Terraform自動化](linux_operations/terraform_automation/terraform_oneliners.md) | IaC運用・コスト最適化 | Terraform + Ruby | ✅ 完成 |
+| [⚙️ SystemCtl管理](linux_operations/systemctl_service/systemctl_oneliners.md) | サービス管理・システム監視 | SystemD + Ruby | ✅ 完成 |
+
+**特徴**: 実際の本番環境で使われている高度なワンライナー技術を習得
+
+📋 [詳細ガイドを見る](linux_operations/README.md)
 
 </details>
 
