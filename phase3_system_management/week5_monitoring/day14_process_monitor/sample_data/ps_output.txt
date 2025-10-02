@@ -1,0 +1,48 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.3 168820 12456 ?        Ss   08:15   0:01 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    08:15   0:00 [kthreadd]
+root        12  0.0  0.0      0     0 ?        I<   08:15   0:00 [rcu_sched]
+root        45  0.0  0.0      0     0 ?        S    08:15   0:02 [migration/0]
+root       123  0.2  0.5 123456  20480 ?       Ss   08:15   0:03 /usr/sbin/sshd -D
+systemd-r  234  0.1  0.2  89456   8192 ?       Ss   08:15   0:01 /lib/systemd/systemd-resolved
+messagebu  345  0.0  0.1  51234   4096 ?       Ss   08:15   0:00 /usr/bin/dbus-daemon --system
+root       456  0.0  0.3 246810  13824 ?       Ssl  08:15   0:02 /usr/sbin/rsyslogd -n
+root       567  0.0  0.2 142536   8964 ?       Ss   08:15   0:00 /lib/systemd/systemd-logind
+root       678  0.0  0.4 274536  18432 ?       Ssl  08:15   0:01 /usr/bin/containerd
+mysql     1234 38.7 15.2 4194304 618234 ?      Ssl  08:20   5:42 /usr/sbin/mysqld --daemonize
+www-data  1456 45.2  8.5 2048576 345678 ?      Sl   09:30   2:15 nginx: worker process
+www-data  1457 42.1  8.3 2048576 337920 ?      Sl   09:30   2:10 nginx: worker process
+www-data  1458 38.5  8.1 2048576 329728 ?      Sl   09:30   2:05 nginx: worker process
+root      1459  0.0  0.5 153600  20480 ?       Ss   09:30   0:00 nginx: master process /usr/sbin/nginx
+redis     2345 15.6  3.2 262144  130048 ?      Ssl  08:25   1:12 redis-server *:6379
+postgre   2456 22.1  9.8 2097152 398336 ?      Ss   08:30   2:34 postgres: main process
+postgre   2457 12.3  4.5 1048576 183296 ?      Ss   08:30   1:15 postgres: writer process
+postgre   2458  8.7  3.2 786432  130048 ?      Ss   08:30   0:52 postgres: checkpointer process
+app       3456 62.3 12.8 1572864 520192 ?      Sl   10:15   1:23 ruby /var/www/app/server.rb
+app       3457 28.4  5.2 524288  211456 ?      S    10:16   0:45 ruby /var/www/app/worker.rb
+app       3458 15.2  3.8 393216  154624 ?      S    10:16   0:32 ruby /var/www/app/scheduler.rb
+app       3459  0.0  0.0      0      0 ?       Z    11:30   0:00 [ruby] <defunct>
+app       4567 28.4  5.2 524288  211456 ?      S    11:00   0:45 node /var/www/api/index.js
+app       4568 12.1  2.8 327680  114688 ?      S    11:00   0:28 node /var/www/api/worker.js
+app       5678 98.5 22.3 3145728 907264 ?      R    12:15   0:58 python /opt/ml/train.py
+app       5679 45.2  8.5 1048576 346112 ?      S    12:15   0:22 python /opt/ml/preprocess.py
+root      6789  0.1  0.2  98304   8192 pts/0   Ss   12:00   0:00 -bash
+root      6790  0.0  0.1  56432   4096 pts/0   R+   14:23   0:00 ps aux
+app       7890 82.3 18.7 2621440 761856 ?      R    13:45   1:34 java -Xmx2g -jar /opt/app/service.jar
+app       7891  0.0  0.0      0      0 ?       Z    14:00   0:00 [java] <defunct>
+admin     8901  0.1  0.3 186432  12288 pts/1   Ss   13:00   0:01 -bash
+admin     8902  0.0  0.2 142536   8192 pts/1   S+   14:15   0:00 vim /etc/nginx/nginx.conf
+nobody    9012  0.2  0.4 245760  16384 ?       Ss   08:15   0:05 /usr/sbin/prometheus
+nobody    9013 12.5  3.5 524288  142336 ?      Sl   08:15   2:45 /usr/bin/grafana-server
+root      9123  0.0  0.0      0      0 ?       Z    13:00   0:00 [systemd] <defunct>
+root      9234  0.3  0.6 327680  24576 ?       Ssl  08:15   0:08 /usr/bin/dockerd
+root      9345  0.1  0.3 245760  12288 ?       Ssl  08:15   0:03 docker-proxy
+app      10123 55.6 16.2 2097152 659456 ?      Sl   14:00   0:35 /usr/bin/python3 /var/www/django/manage.py runserver
+app      10124 22.3  7.8 1048576 317440 ?      S    14:00   0:15 /usr/bin/python3 /var/www/celery/worker.py
+app      10125 18.7  5.4 786432  219648 ?      S    14:00   0:12 /usr/bin/python3 /var/www/celery/beat.py
+root     10234  0.0  0.2 123456   8192 ?       Ss   14:10   0:00 /usr/sbin/cron -f
+syslog   10345  0.1  0.3 245760  12288 ?       Ssl  08:15   0:02 /usr/sbin/rsyslogd
+backup   11234  2.3  1.2 524288  48856 ?       S    03:00   5:32 rsync -avz /data/ backup.example.com:/backup/
+root     11345  0.0  0.1  98304   4096 ?       Ss   14:20   0:00 sudo -u postgres psql
+postgre  11346  0.2  0.8 524288  32768 pts/2   S+   14:20   0:00 psql
+daemon   12345  0.0  0.1  56432   4096 ?       Ss   08:15   0:00 /usr/sbin/atd -f
