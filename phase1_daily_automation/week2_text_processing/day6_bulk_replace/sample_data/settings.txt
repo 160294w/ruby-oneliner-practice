@@ -1,0 +1,13 @@
+# Service Settings
+service_name=MyService
+service_host=localhost
+service_port=8080
+
+# Monitoring
+monitor_url=http://localhost:9090/metrics
+alert_endpoint=http://localhost:9090/alerts
+
+# Logging
+log_level=DEBUG
+log_host=localhost
+log_port=514
