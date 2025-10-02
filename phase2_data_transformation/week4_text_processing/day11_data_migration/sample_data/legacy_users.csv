@@ -1,0 +1,13 @@
+user_id,name,email,phone,age,status,department,created_at
+1,田中 太郎,Tanaka@Example.COM,03-1234-5678,32,active,開発,2020-01-15 10:30:00
+2,佐藤  花子,sato@example.com,090.2345.6789,28,active,営業,2020-03-22 14:20:00
+3,鈴木一郎,suzuki@example.com,080-3456-7890,35,active,企画,2019-11-05 09:15:00
+4,高橋美咲,TAKAHASHI@EXAMPLE.COM,(03)4567-8901,26,inactive,人事,2021-02-18 11:45:00
+5,渡辺健,watanabe@example.com,070 5678 9012,41,active,総務,2018-07-30 16:00:00
+6,山本由紀,yamamoto@invalid,03-6789-0123,29,active,開発,2020-09-12 13:30:00
+7,小林愛,kobayashi@example.com,080-7890-1234,999,active,営業,2021-05-25 10:00:00
+8,中村亮,nakamura@example.com,090-8901-2345,37,active,企画,2019-08-20 15:20:00
+9,加藤美紀,kato@example.com,03.9012.3456,31,inactive,人事,2020-12-10 09:30:00
+10,吉田順,yoshida@example.com,070-0123-4567,44,active,総務,2018-04-15 14:00:00
+11,斉藤真由美,saito@example.com,invalid-phone,30,active,開発,2020-06-08 11:15:00
+12,  ,empty-name@example.com,03-1111-2222,25,active,営業,2021-08-30 10:45:00

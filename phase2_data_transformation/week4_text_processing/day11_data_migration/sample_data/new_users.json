@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "田中太郎",
+    "email": "tanaka@example.com",
+    "age": 33,
+    "department": "開発"
+  },
+  {
+    "id": 2,
+    "name": "佐藤花子",
+    "email": "sato@example.com",
+    "age": 28,
+    "department": "営業"
+  },
+  {
+    "id": 3,
+    "name": "鈴木一郎",
+    "email": "suzuki@example.com",
+    "age": 35,
+    "department": "企画"
+  },
+  {
+    "id": 5,
+    "name": "渡辺健",
+    "email": "watanabe@example.com",
+    "age": 42,
+    "department": "総務"
+  },
+  {
+    "id": 6,
+    "name": "山本由紀",
+    "email": "yamamoto@example.com",
+    "age": 30,
+    "department": "開発"
+  }
+]

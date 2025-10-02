@@ -1,0 +1,54 @@
+お問い合わせ先一覧
+===================
+
+営業部門
+--------
+担当: 田中太郎
+メール: tanaka.taro@example.com
+電話: 03-1234-5678
+直通: 090 1234 5678
+
+マーケティング部門
+-----------------
+担当: 佐藤花子
+メール: sato.hanako@marketing.example.jp
+電話: 03.2345.6789
+携帯: 080-2345-6789
+
+技術サポート
+-----------
+サポートチーム: support@example.com
+緊急連絡先: emergency@example.co.jp
+電話: 0120-345-678
+FAX: 03-3456-7890
+
+海外拠点
+-------
+US Office: contact-us@example.com
+UK Office: info@example.co.uk
+電話: +1-555-123-4567
+
+カスタマーサービス
+-----------------
+お客様窓口: customer-service@example.com
+問い合わせ: inquiry@example.com
+電話: 0570-012-345
+
+開発チーム
+---------
+テクニカルリード: dev.lead@example.com
+バックエンド: backend-team@example.com
+フロントエンド: frontend.team@example.com
+電話: 03 4567 8901
+
+その他の連絡先
+-------------
+人事部: hr@example.com
+経理部: accounting@example.com
+総務部: general-affairs@example.com
+
+※ 無効なメールアドレス例:
+- invalid@
+- @example.com
+- user@@example.com
+- user@.com

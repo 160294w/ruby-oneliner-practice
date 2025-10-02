@@ -1,0 +1,65 @@
+技術ドキュメント: Web開発リソース集
+====================================
+
+## 公式ドキュメント
+
+Ruby公式サイト: https://www.ruby-lang.org/ja/
+Ruby on Rails: https://rubyonrails.org/
+API仕様書: https://api.example.com/v1/docs
+
+## 参考リンク
+
+### チュートリアル
+- 初心者向けRubyガイド: https://www.example.com/ruby/tutorial
+- Rails入門: https://guides.rubyonrails.org/getting_started.html
+- REST API設計: https://restfulapi.net/
+
+### ツール・ライブラリ
+- GitHub リポジトリ: https://github.com/ruby/ruby
+- RubyGems: https://rubygems.org/
+- Bundler: https://bundler.io/
+- Docker Hub: https://hub.docker.com/
+
+### デプロイ・インフラ
+- Heroku: https://www.heroku.com/
+- AWS ドキュメント: https://docs.aws.amazon.com/
+- DigitalOcean: https://www.digitalocean.com/
+- Vercel: https://vercel.com/
+
+### 学習リソース
+- Qiita Ruby記事: https://qiita.com/tags/ruby
+- Stack Overflow: https://stackoverflow.com/questions/tagged/ruby
+- Reddit Ruby: https://www.reddit.com/r/ruby/
+- Ruby Weekly: https://rubyweekly.com/
+
+### ブログ・コミュニティ
+- 技術ブログ: https://tech.example.com/blog/
+- エンジニアブログ: https://engineering.example.jp/
+- 開発者フォーラム: https://forum.example.com/
+- Slack コミュニティ: https://ruby-jp.slack.com/
+
+### セキュリティ
+- OWASP: https://owasp.org/
+- Ruby セキュリティ: https://www.ruby-lang.org/en/security/
+- CVE データベース: https://cve.mitre.org/
+
+## 注意事項
+
+HTTPリンクは非推奨です:
+- http://old-site.example.com/ (HTTPS移行が必要)
+- http://legacy.example.net/docs (セキュアでない)
+
+内部リンク:
+- http://localhost:3000/
+- http://127.0.0.1:8080/api
+
+無効なURL例:
+- https://
+- http:/example.com
+- www.example.com (プロトコルなし)
+
+## 関連ドキュメント
+
+マニュアル: https://manual.example.com/latest/
+API v2: https://api.example.com/v2/reference
+開発ガイド: https://developers.example.com/guides/

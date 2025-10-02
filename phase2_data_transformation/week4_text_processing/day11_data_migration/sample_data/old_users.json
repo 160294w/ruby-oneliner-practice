@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "田中太郎",
+    "email": "tanaka@example.com",
+    "age": 32,
+    "department": "開発"
+  },
+  {
+    "id": 2,
+    "name": "佐藤花子",
+    "email": "sato@example.com",
+    "age": 28,
+    "department": "営業"
+  },
+  {
+    "id": 3,
+    "name": "鈴木一郎",
+    "email": "suzuki@example.com",
+    "age": 35,
+    "department": "企画"
+  },
+  {
+    "id": 4,
+    "name": "高橋美咲",
+    "email": "takahashi@example.com",
+    "age": 26,
+    "department": "人事"
+  }
+]
