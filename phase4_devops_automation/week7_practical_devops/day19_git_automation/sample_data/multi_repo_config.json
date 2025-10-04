@@ -1,0 +1,62 @@
+{
+  "repositories": [
+    {
+      "name": "web-app",
+      "path": "~/projects/web-app",
+      "status": "clean",
+      "branch": "main",
+      "unpushed_commits": 0
+    },
+    {
+      "name": "api-server",
+      "path": "~/projects/api-server",
+      "status": "modified",
+      "branch": "develop",
+      "unpushed_commits": 3,
+      "modified_files": ["src/api.rb", "config/database.yml"]
+    },
+    {
+      "name": "mobile-app",
+      "path": "~/projects/mobile-app",
+      "status": "clean",
+      "branch": "main",
+      "unpushed_commits": 0
+    },
+    {
+      "name": "infrastructure",
+      "path": "~/projects/infrastructure",
+      "status": "untracked",
+      "branch": "feature/terraform-update",
+      "unpushed_commits": 5,
+      "untracked_files": ["terraform/new_module.tf"]
+    },
+    {
+      "name": "documentation",
+      "path": "~/projects/documentation",
+      "status": "clean",
+      "branch": "main",
+      "unpushed_commits": 1
+    }
+  ],
+  "merged_branches": {
+    "web-app": ["feature/login", "bugfix/validation", "feature/dashboard"],
+    "api-server": ["feature/rest-api", "hotfix/security"],
+    "mobile-app": [],
+    "infrastructure": ["feature/docker", "feature/k8s"],
+    "documentation": ["update/readme"]
+  },
+  "commit_stats": {
+    "last_7_days": {
+      "Alice": 15,
+      "Bob": 12,
+      "Charlie": 18,
+      "David": 8
+    },
+    "last_30_days": {
+      "Alice": 45,
+      "Bob": 38,
+      "Charlie": 52,
+      "David": 25
+    }
+  }
+}
