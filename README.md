@@ -110,6 +110,22 @@ ruby ../../../tools/progress_tracker.rb complete 1 basic
 
 </details>
 
+### 🚀 Phase 4: 実践DevOps自動化 (Week 7)
+<details open>
+<summary><strong>⚙️ Git・CI/CD・API・セキュリティ</strong> - 完成済み ✅</summary>
+
+**対象**: DevOpsエンジニア、SRE、セキュリティエンジニア
+
+| Day | 課題 | 難易度 | 実用度 | ステータス |
+|-----|------|--------|--------|------------|
+| 19 | [Git操作・バージョン管理自動化](phase4_devops_automation/week7_practical_devops/day19_git_automation/problem.md) | 🟠 中級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 20 | [CI/CDパイプライン管理](phase4_devops_automation/week7_practical_devops/day20_cicd_pipeline/problem.md) | 🔴 上級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+| 21 | [API連携とセキュリティ監査](phase4_devops_automation/week7_practical_devops/day21_api_security/problem.md) | 🔴 上級 | ⭐⭐⭐⭐⭐ | ✅ 完成 |
+
+**習得スキル**: 複数リポジトリ管理、CI/CD監視、API連携、脆弱性検出
+
+</details>
+
 ### 🐧 Linux運用ワンライナー
 <details open>
 <summary><strong>🔧 実務レベルの運用自動化</strong> - 完成済み ✅</summary>
