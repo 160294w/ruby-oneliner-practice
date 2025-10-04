@@ -1,0 +1,14 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            04:00:00:00:00:01:44:4e:f0:42:47
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, O=DigiCert Inc, CN=DigiCert Global CA G2
+        Validity
+            Not Before: Mar 30 00:00:00 2024 GMT
+            Not After : Apr 30 23:59:59 2025 GMT
+        Subject: C=US, ST=California, L=San Francisco, O=Example Corp, CN=*.example.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
