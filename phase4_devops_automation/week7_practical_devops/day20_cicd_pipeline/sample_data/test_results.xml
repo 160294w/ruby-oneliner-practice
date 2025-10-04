@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="150" failures="8" errors="2" skipped="5" time="45.234">
+  <testsuite name="UserTests" tests="50" failures="3" errors="1" skipped="2" time="15.123">
+    <testcase name="test_user_creation" classname="UserTest" time="0.123">
+    </testcase>
+    <testcase name="test_user_update" classname="UserTest" time="0.234">
+      <failure message="AssertionError: Expected 'John' but got 'Jane'">
+        test_user.rb:45:in `test_user_update'
+      </failure>
+    </testcase>
+    <testcase name="test_user_deletion" classname="UserTest" time="0.156">
+    </testcase>
+    <testcase name="test_user_validation" classname="UserTest" time="0.089">
+      <failure message="Validation failed">
+        test_user.rb:78:in `test_user_validation'
+      </failure>
+    </testcase>
+    <testcase name="test_password_encryption" classname="UserTest" time="0.512">
+      <error message="NoMethodError: undefined method 'encrypt'">
+        lib/user.rb:123:in `encrypt_password'
+      </error>
+    </testcase>
+  </testsuite>
+  <testsuite name="APITests" tests="75" failures="5" errors="1" skipped="3" time="20.456">
+    <testcase name="test_get_users" classname="APITest" time="0.234">
+    </testcase>
+    <testcase name="test_create_user" classname="APITest" time="0.345">
+      <failure message="HTTP 500 Internal Server Error">
+        test_api.rb:23:in `test_create_user'
+      </failure>
+    </testcase>
+    <testcase name="test_update_user" classname="APITest" time="0.456">
+      <failure message="HTTP 404 Not Found">
+        test_api.rb:45:in `test_update_user'
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="IntegrationTests" tests="25" failures="0" errors="0" skipped="0" time="9.655">
+    <testcase name="test_full_workflow" classname="IntegrationTest" time="2.345">
+    </testcase>
+    <testcase name="test_data_consistency" classname="IntegrationTest" time="3.456">
+    </testcase>
+  </testsuite>
+</testsuites>
