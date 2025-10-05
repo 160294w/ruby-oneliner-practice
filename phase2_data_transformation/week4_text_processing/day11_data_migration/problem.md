@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🔄 Day 11: データ移行マスター
+# Day 11: データ移行マスター
 
-[![難易度](https://img.shields.io/badge/難易度-🔴%20上級-red?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-上級-red?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-45分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: レガシーシステムから新システムへのデータ移行、異なるフォーマット間のデータ変換が必要。
 
@@ -18,11 +18,11 @@
 
 **解決**: Rubyワンライナーで安全かつ高速なデータ移行！検証機能付き！
 
-## 📝 課題
+## 課題
 
 レガシーフォーマットからモダンなフォーマットへのデータ変換、整合性チェック、エラーハンドリングをワンライナーで実現してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # レガシーCSVから新形式JSONへ変換
 legacy_users.csv → users.json (検証付き)
@@ -37,7 +37,7 @@ legacy_records.txt → records.csv
 新旧データの比較、差分抽出、マージ処理
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | テクニック | 用途 | 重要度 |
 |-----------|------|--------|
@@ -46,9 +46,9 @@ legacy_records.txt → records.csv
 | データ正規化 | フォーマット統一 | ⭐⭐⭐⭐ |
 | トランザクション処理 | データ整合性保証 | ⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 固定長フォーマットのパースから始めましょう：
 
 ```ruby
@@ -71,7 +71,7 @@ end
 
 </details>
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. レガシーCSVからJSONへ変換（検証付き）</strong></summary>
@@ -227,7 +227,7 @@ puts "更新: #{updated.size}件"
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>包括的データ移行システム</strong></summary>
@@ -398,7 +398,7 @@ migration.migrate_from_csv(
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 🔄 **システムリプレース** - 旧システムから新システムへのデータ移行
 - 📊 **データ統合** - 複数のデータソースの統合・正規化

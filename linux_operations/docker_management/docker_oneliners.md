@@ -2,7 +2,7 @@
 
 実際のDevOps現場で使われているDocker運用ワンライナーを厳選しました。
 
-## 🔍 コンテナ監視
+## コンテナ監視
 
 ### 異常コンテナの検出・通知
 ```ruby
@@ -22,7 +22,7 @@ docker stats --no-stream --format "{{.Container}},{{.CPUPerc}},{{.MemUsage}}" | 
 docker stats --no-stream --format "{{.Container}},{{.MemUsage}}" | ruby -e 'STDIN.readlines.each { |line| name, mem = line.strip.split(","); usage = mem.split("/")[0]; puts "⚠️  #{name}: #{usage}" if usage.include?("GiB") && usage.to_f > 1.0 }'
 ```
 
-## 📋 ログ分析
+## ログ分析
 
 ### エラーログの一括収集
 ```ruby
@@ -62,7 +62,7 @@ docker images --format "{{.Repository}},{{.Tag}},{{.CreatedAt}}" | ruby -e 'requ
 docker ps --format "{{.Names}}" | ruby -e 'STDIN.readlines.each { |name| log_path = "/var/lib/docker/containers/$(docker inspect --format=\"{{.Id}}\" #{name.strip})/#{name.strip}-json.log"; size = `ls -lh "#{log_path}" 2>/dev/null | awk \"{print \\$5}\"`.strip; puts "#{name.strip}: #{size}" if !size.empty? && size.match(/[0-9]+[GM]/) }'
 ```
 
-## 🚀 自動化
+## 自動化
 
 ### ヘルスチェック失敗時の自動再起動
 ```ruby
@@ -82,7 +82,7 @@ docker stats --no-stream nginx --format "{{.CPUPerc}}" | ruby -e 'cpu = STDIN.re
 ruby -e 'env = ENV["RAILS_ENV"] || "development"; db_host = env == "production" ? "prod-db.example.com" : "localhost"; system("docker run -e DATABASE_HOST=#{db_host} -e RAILS_ENV=#{env} --name app-#{env} my-app:latest")'
 ```
 
-## 🔧 高度な運用
+## 高度な運用
 
 ### マルチステージビルドの最適化分析
 ```ruby
@@ -102,7 +102,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image
 docker network ls --format "{{.Name}}" | ruby -e 'STDIN.readlines.each { |network| puts "=== #{network.strip} ==="; containers = `docker network inspect #{network.strip} --format "{{range .Containers}}{{.Name}} {{end}}"`.strip; puts "接続中コンテナ: #{containers.empty? ? "なし" : containers}" }'
 ```
 
-## 💡 運用のベストプラクティス
+## 運用のベストプラクティス
 
 ### 1. 定期的な健康チェック
 ```bash

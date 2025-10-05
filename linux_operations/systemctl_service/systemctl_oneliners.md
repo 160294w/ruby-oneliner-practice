@@ -2,7 +2,7 @@
 
 Linux システム管理で実際に使われているsystemctl運用ワンライナーを収録しました。
 
-## 🔍 サービス監視・状態確認
+## サービス監視・状態確認
 
 ### 全サービスの健康状態チェック
 ```ruby
@@ -42,7 +42,7 @@ ruby -e 'service = ARGV[0] || "nginx"; puts "#{service} の依存関係:"; deps 
 journalctl --since="1 hour ago" --priority=3 --no-pager | ruby -e 'services = {}; STDIN.readlines.each { |line| if match = line.match(/(\w+\.service)/); services[match[1]] = (services[match[1]] || 0) + 1; end }; puts "⚠️  過去1時間でエラーが多いサービス:"; services.sort_by { |_, count| -count }.first(5).each { |service, count| puts "  #{service}: #{count}件のエラー" }'
 ```
 
-## 📊 パフォーマンス分析
+## パフォーマンス分析
 
 ### サービス起動時間の分析
 ```ruby
@@ -82,7 +82,7 @@ services_to_reload = %w[nginx apache2 rsyslog]; services_to_reload.each { |servi
 ruby -e 'puts "🧹 月次メンテナンス開始 - #{Time.now}"; system("sudo journalctl --vacuum-time=30d"); puts "✅ ジャーナルログクリーンアップ完了"; maintenance_services = %w[logrotate rsyslog cron]; maintenance_services.each { |service| puts "🔄 #{service} 再起動中..."; system("sudo systemctl restart #{service}"); sleep 2; status = `systemctl is-active #{service}`.strip; puts status == "active" ? "✅ #{service} 再起動成功" : "❌ #{service} 再起動失敗" }; puts "🎉 月次メンテナンス完了"'
 ```
 
-## 📋 ログ分析・トラブルシューティング
+## ログ分析・トラブルシューティング
 
 ### エラーログの分析
 ```ruby
@@ -122,7 +122,7 @@ systemctl list-units --type=service --state=running --no-pager | ruby -e 'servic
 systemctl list-units --type=service --state=running --no-pager | ruby -e 'services = STDIN.readlines[1..-2].map { |line| line.split[0] }; services.select { |s| s.match(/(nginx|apache|ssh|mysql)/) }.each { |service| puts "🔥 #{service} のポート確認:"; netstat_output = `netstat -tlnp 2>/dev/null | grep #{service}`; if !netstat_output.empty?; netstat_output.lines.each { |line| port = line.split[3].split(":").last; puts "  ポート #{port} でリッスン中" }; else; puts "  アクティブなポートが見つかりません"; end }'
 ```
 
-## 🎯 CI/CD・デプロイメント統合
+## CI/CD・デプロイメント統合
 
 ### アプリケーションデプロイ後の検証
 ```ruby
@@ -142,7 +142,7 @@ old_service = "myapp-blue"; new_service = "myapp-green"; puts "🔄 Blue-Green�
 service_name = ARGV[0] || "myapp"; backup_time = Time.now.strftime("%Y%m%d_%H%M%S"); puts "💾 #{service_name} の設定をバックアップ中..."; system("sudo cp /etc/systemd/system/#{service_name}.service /etc/systemd/system/#{service_name}.service.backup.#{backup_time}"); puts "🔄 #{service_name} 再起動中..."; system("sudo systemctl daemon-reload && sudo systemctl restart #{service_name}"); sleep 10; status = `systemctl is-active #{service_name}`.strip; error_count = `journalctl -u #{service_name} --since="1 minute ago" --priority=0..3 --no-pager | wc -l`.strip.to_i; if status == "active" && error_count == 0; puts "✅ デプロイ成功"; else; puts "❌ 問題検出、ロールバック実行中..."; system("sudo cp /etc/systemd/system/#{service_name}.service.backup.#{backup_time} /etc/systemd/system/#{service_name}.service"); system("sudo systemctl daemon-reload && sudo systemctl restart #{service_name}"); puts "🔙 ロールバック完了"; end'
 ```
 
-## 💡 運用ベストプラクティス
+## 運用ベストプラクティス
 
 ### 1. 定期的なシステム健康チェック
 ```bash

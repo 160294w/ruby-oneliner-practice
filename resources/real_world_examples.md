@@ -47,7 +47,7 @@ require 'fileutils'
 Dir.glob("*.{jpg,png,gif}").select { |f| File.mtime(f) < Time.now - 30*24*3600 }.each { |f| FileUtils.mv(f, "archive/#{f}") }
 ```
 
-## 🎯 プロジェクト管理での活用
+## プロジェクト管理での活用
 
 ### 4. コードベース分析
 
@@ -83,7 +83,7 @@ missing = %w[database redis cache].select { |key| config[key].nil? }
 puts missing.empty? ? "設定OK" : "設定不足: #{missing.join(', ')}"
 ```
 
-## 📊 データ分析での活用
+## データ分析での活用
 
 ### 6. レポート生成
 
@@ -115,7 +115,7 @@ require 'digest'
 Dir.glob("**/*").select { |f| File.file?(f) }.group_by { |f| File.size(f) }.select { |size, files| files.size > 1 }
 ```
 
-## 🔍 トラブルシューティング
+## トラブルシューティング
 
 ### 8. 問題調査
 
@@ -147,7 +147,7 @@ missing = required_gems.select { |gem| `gem list #{gem}`.empty? }
 puts missing.empty? ? "環境OK" : "未インストール: #{missing.join(', ')}"
 ```
 
-## 💡 効率化のコツ
+## 効率化のコツ
 
 ### 10. ワンライナーからスクリプトへ
 

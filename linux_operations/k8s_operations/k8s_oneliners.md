@@ -2,7 +2,7 @@
 
 Kubernetes運用で実際に使われている効率的なワンライナーを収録しました。
 
-## 🔍 Pod・Service監視
+## Pod・Service監視
 
 ### 異常Pod状態の一括確認
 ```ruby
@@ -22,7 +22,7 @@ kubectl get pods --all-namespaces -o json | ruby -rjson -e 'data = JSON.parse(ST
 kubectl get pods --all-namespaces --field-selector=status.phase=Pending -o json | ruby -rjson -e 'data = JSON.parse(STDIN.read); data["items"].each { |pod| events = `kubectl describe pod #{pod["metadata"]["name"]} -n #{pod["metadata"]["namespace"]} | grep -A 5 Events`; puts "#{pod["metadata"]["name"]}: #{events.split(\"\n\").last}" }'
 ```
 
-## 📊 リソース分析
+## リソース分析
 
 ### Namespace別リソース使用状況
 ```ruby
@@ -42,7 +42,7 @@ kubectl get pods --all-namespaces -o wide | ruby -e 'lines = STDIN.readlines[1..
 kubectl get pods --all-namespaces -o json | ruby -rjson -e 'data = JSON.parse(STDIN.read); no_limits = data["items"].select { |pod| pod["spec"]["containers"].any? { |c| !c["resources"] || (!c["resources"]["limits"] && !c["resources"]["requests"]) } }; no_limits.each { |pod| puts "⚠️  #{pod["metadata"]["namespace"]}/#{pod["metadata"]["name"]}: リソース制限なし" }'
 ```
 
-## 🔧 ConfigMap・Secret管理
+## ConfigMap・Secret管理
 
 ### 環境別ConfigMapの動的生成
 ```ruby
@@ -62,7 +62,7 @@ kubectl get secret my-secret -o json | ruby -rjson -rbase64 -e 'data = JSON.pars
 kubectl get configmap app-config -o json | ruby -rjson -e 'cm = JSON.parse(STDIN.read); current_hash = cm["data"].hash.to_s; stored_hash = File.read("/tmp/cm-hash") rescue ""; if current_hash != stored_hash; system("kubectl rollout restart deployment/my-app"); File.write("/tmp/cm-hash", current_hash); puts "🔄 ConfigMap変更検出、アプリケーション再起動"; end'
 ```
 
-## 🚀 デプロイメント・スケーリング
+## デプロイメント・スケーリング
 
 ### ローリングアップデートの進行状況監視
 ```ruby
@@ -82,7 +82,7 @@ kubectl top pods -l app=my-app | ruby -e 'lines = STDIN.readlines[1..]; total_cp
 ruby -ryaml -e 'new_version = ARGV[0]; service_yaml = `kubectl get service my-app-service -o yaml`; service = YAML.load(service_yaml); service["spec"]["selector"]["version"] = new_version; File.write("/tmp/service.yaml", YAML.dump(service)); system("kubectl apply -f /tmp/service.yaml"); puts "✅ Service切り替え完了: #{new_version}"' v2.0.0
 ```
 
-## 📋 ログ・トラブルシューティング
+## ログ・トラブルシューティング
 
 ### 複数Pod からのログ集約
 ```ruby
@@ -142,7 +142,7 @@ required_services = %w[database redis api-gateway]; all_ready = required_service
 current_weight = `kubectl get virtualservice my-app -o jsonpath='{.spec.http[0].route[1].weight}'`.to_i; new_weight = [current_weight + 10, 100].min; old_weight = 100 - new_weight; ruby_script = %Q{kubectl patch virtualservice my-app --type='json' -p='[{"op": "replace", "path": "/spec/http/0/route/0/weight", "value": #{old_weight}}, {"op": "replace", "path": "/spec/http/0/route/1/weight", "value": #{new_weight}}]'}; system(ruby_script); puts "🔄 カナリア重み調整: #{new_weight}%"
 ```
 
-## 💡 運用ベストプラクティス
+## 運用ベストプラクティス
 
 ### 1. クラスター健康チェック
 ```bash

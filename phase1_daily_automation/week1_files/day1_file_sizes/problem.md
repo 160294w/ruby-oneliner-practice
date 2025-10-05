@@ -2,7 +2,7 @@
 
 # 📏 Day 1: ファイルサイズ一覧表示
 
-[![難易度](https://img.shields.io/badge/難易度-🟢%20基本-green?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-基本-green?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-15分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: 開発チームのプロジェクトで、ディスク容量を圧迫しているファイルを素早く見つけたい。
 
@@ -18,7 +18,7 @@
 
 **解決**: Rubyワンライナーで瞬時にファイルサイズ一覧を表示！
 
-## 📝 課題
+## 課題
 
 カレントディレクトリ内の`.txt`ファイルすべてのファイルサイズを一覧表示するRubyワンライナーを書いてください。
 
@@ -30,7 +30,7 @@ sample3.txt: 11 bytes
 large_sample.txt: 462 bytes
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 この課題で習得できるスキル：
 
@@ -40,9 +40,9 @@ large_sample.txt: 462 bytes
 | `File.size()` | ファイルサイズ取得 | ⭐⭐⭐⭐ |
 | `each` | 繰り返し処理 | ⭐⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 まずは基本的な形から始めましょう：
 
 ```ruby
@@ -58,7 +58,7 @@ Dir.glob("sample_data/*.txt").each { |file| puts "#{File.basename(file)}: #{___}
 
 </details>
 
-### 🟡 応用レベル
+### 応用レベル
 基本ができたら、これらにも挑戦してみてください：
 
 <details>
@@ -92,7 +92,7 @@ total = files.sum { |f| File.size(f) }
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 より実践的な機能を追加：
 
 <details>
@@ -102,7 +102,7 @@ total = files.sum { |f| File.size(f) }
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 この技術が活躍する場面：
 

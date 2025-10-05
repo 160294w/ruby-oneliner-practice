@@ -1,6 +1,6 @@
 # Day 4: ヒントとステップガイド
 
-## 🔍 段階的に考えてみよう
+## 段階的に考えてみよう
 
 ### Step 1: CSVファイルの基本読み込み
 ```ruby
@@ -38,7 +38,7 @@ CSV.foreach("sample_data/sales.csv", headers: true) do |row|
 end
 ```
 
-## 💡 よく使うパターン
+## よく使うパターン
 
 ### パターン1: selectでフィルタリング
 ```ruby
@@ -66,7 +66,7 @@ dept_totals = by_department.transform_values do |rows|
 end
 ```
 
-## 🚫 よくある間違い
+## よくある間違い
 
 ### 間違い1: 文字列を数値として扱う
 ```ruby
@@ -98,7 +98,7 @@ CSV.foreach("huge_file.csv", headers: true) do |row|
 end
 ```
 
-## 🎯 応用のヒント
+## 応用のヒント
 
 ### 集計処理
 ```ruby
@@ -145,7 +145,7 @@ formatted = amount.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
 # => "1,234,567"
 ```
 
-## 🔧 デバッグのコツ
+## デバッグのコツ
 
 ### データの確認
 ```ruby

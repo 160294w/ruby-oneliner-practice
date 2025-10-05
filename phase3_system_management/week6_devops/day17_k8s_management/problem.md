@@ -1,8 +1,8 @@
 <div align="center">
 
-# ☸️ Day 17: Kubernetes管理ワンライナー
+# Day 17: Kubernetes管理ワンライナー
 
-[![難易度](https://img.shields.io/badge/難易度-🔴%20上級-red?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-上級-red?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-45分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: Kubernetesクラスターの運用で、Pod監視、リソース管理、トラブルシューティングを効率化したい。
 
@@ -18,11 +18,11 @@
 
 **解決**: RubyとKubernetesを組み合わせた運用自動化！
 
-## 📝 課題
+## 課題
 
 Kubernetes環境でのPod監視、リソース管理、設定ファイル操作をワンライナーで自動化してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # Pod健康状態の一括監視
 kubectl get pods → 異常Podの特定・再起動
@@ -34,7 +34,7 @@ kubectl get pods → 異常Podの特定・再起動
 環境別ConfigMap/Secretの自動生成
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | 技術要素 | 用途 | 重要度 |
 |----------|------|--------|
@@ -43,9 +43,9 @@ kubectl get pods → 異常Podの特定・再起動
 | `JSON.parse` | kubectl JSON出力解析 | ⭐⭐⭐⭐ |
 | `system/backtick` | kubectlコマンド実行 | ⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 Kubernetes情報の基本取得から始めましょう：
 
 ```ruby
@@ -56,7 +56,7 @@ data = JSON.parse(pods)
 data["items"].each { |pod| puts pod["metadata"]["name"] }
 ```
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. 異常Pod検出</strong></summary>
@@ -84,7 +84,7 @@ end
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>運用自動化システム</strong></summary>
@@ -93,14 +93,14 @@ end
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 🔍 **クラスター監視** - Pod、Node、Serviceの健康状態確認
 - 📋 **リソース最適化** - CPU/Memory使用率の分析・最適化
 - 🔄 **自動運用** - 異常Pod再起動、スケーリング判定
 - 🚨 **障害対応** - ログ集約、トラブルシューティング支援
 
-## 🛠️ 前提条件
+## 前提条件
 
 このコースを実施するには以下が必要です：
 

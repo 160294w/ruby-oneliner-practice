@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🐳 Day 16: Docker運用管理ワンライナー
+# Day 16: Docker運用管理ワンライナー
 
-[![難易度](https://img.shields.io/badge/難易度-🔴%20上級-red?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-上級-red?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-40分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: Docker環境でのコンテナ監視、メンテナンス、トラブルシューティングを効率化したい。
 
@@ -18,11 +18,11 @@
 
 **解決**: RubyとDockerコマンドを組み合わせた運用自動化！
 
-## 📝 課題
+## 課題
 
 Dockerコンテナの状態監視、ログ分析、メンテナンス作業をワンライナーで自動化してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # コンテナ健康状態チェック
 docker ps → 異常コンテナの特定・通知
@@ -34,7 +34,7 @@ docker ps → 異常コンテナの特定・通知
 複数コンテナからエラーログを一括抽出
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | 技術要素 | 用途 | 重要度 |
 |----------|------|--------|
@@ -43,9 +43,9 @@ docker ps → 異常コンテナの特定・通知
 | `backtick/system` | Rubyからシェル実行 | ⭐⭐⭐⭐ |
 | `JSON.parse` | Docker JSON出力解析 | ⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 Docker情報の基本取得から始めましょう：
 
 ```ruby
@@ -54,7 +54,7 @@ containers = `docker ps --format "table {{.Names}}\t{{.Status}}"`.lines[1..]
 containers.each { |line| puts line.strip }
 ```
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. 異常コンテナ検出</strong></summary>
@@ -79,7 +79,7 @@ high_cpu = stats.lines[1..].select { |line| line.split[1].to_f > 50.0 }
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>包括的監視システム</strong></summary>
@@ -88,14 +88,14 @@ high_cpu = stats.lines[1..].select { |line| line.split[1].to_f > 50.0 }
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 🔍 **コンテナ健康監視** - 異常終了、リソース枯渇の早期発見
 - 📋 **ログ集約分析** - 複数コンテナからのエラーログ収集
 - 🔄 **自動メンテナンス** - 不要イメージ削除、ログローテーション
 - 🚨 **アラート通知** - Slackやメール通知との連携
 
-## 🛠️ 前提条件
+## 前提条件
 
 このコースを実施するには以下が必要です：
 

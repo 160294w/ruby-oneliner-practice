@@ -1,6 +1,6 @@
 # Day 18: ヒントとステップガイド
 
-## 🔍 段階的に考えてみよう
+## 段階的に考えてみよう
 
 ### Step 1: Terraform状態の基本取得
 ```ruby
@@ -36,7 +36,7 @@ by_type.each do |type, res_list|
 end
 ```
 
-## 💡 よく使うパターン
+## よく使うパターン
 
 ### パターン1: tfstateファイルの直接読み込み
 ```ruby
@@ -100,7 +100,7 @@ resources_with_deps.each do |resource|
 end
 ```
 
-## 🚫 よくある間違い
+## よくある間違い
 
 ### 間違い1: terraform showとtfstateの構造の違い
 ```ruby
@@ -148,7 +148,7 @@ ingress_rules = sg["values"]["ingress"] || []
 ingress_rules.each { |rule| ... }
 ```
 
-## 🎯 応用のヒント
+## 応用のヒント
 
 ### IAMポリシーの監査
 ```ruby
@@ -285,7 +285,7 @@ if resources_without_tags.any?
 end
 ```
 
-## 🔧 デバッグのコツ
+## デバッグのコツ
 
 ### JSON構造の確認
 ```ruby
@@ -359,7 +359,7 @@ def compare_states(old_state_path, new_state_path)
 end
 ```
 
-## 📋 実用的なワンライナー集
+## 実用的なワンライナー集
 
 ```bash
 # 全リソースの一覧
@@ -387,7 +387,7 @@ terraform plan -json | ruby -rjson -e 'actions = {"create" => 0, "update" => 0, 
 terraform show -json | ruby -rjson -e 'state = JSON.parse(STDIN.read); state["values"]["root_module"]["resources"].select { |r| r["type"] == "aws_s3_bucket" }.each { |b| acl = b["values"]["acl"]; puts "⚠️ #{b["name"]}: Public bucket (#{acl})" if acl =~ /public/ }'
 ```
 
-## 🎯 高度なテクニック
+## 高度なテクニック
 
 ### 包括的なセキュリティ監査スクリプト
 ```ruby

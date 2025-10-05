@@ -1,6 +1,6 @@
 # Day 15: ヒントとステップガイド
 
-## 🔍 段階的に考えてみよう
+## 段階的に考えてみよう
 
 ### Step 1: ディスク使用量の基本取得
 ```ruby
@@ -39,7 +39,7 @@ established = connections.count { |line| line.include?("ESTAB") }
 puts "アクティブ接続: #{established}件"
 ```
 
-## 💡 よく使うパターン
+## よく使うパターン
 
 ### パターン1: ディスク情報の構造化
 ```ruby
@@ -104,7 +104,7 @@ by_port = connections.group_by { |c|
 }.transform_values(&:size)
 ```
 
-## 🚫 よくある間違い
+## よくある間違い
 
 ### 間違い1: ディスク容量の単位を無視
 ```ruby
@@ -144,7 +144,7 @@ real_disks = all_disks.reject { |line|
 }
 ```
 
-## 🎯 応用のヒント
+## 応用のヒント
 
 ### ディスク容量の予測
 ```ruby
@@ -268,7 +268,7 @@ web_connections[:by_state].each do |state, count|
 end
 ```
 
-## 🔧 デバッグのコツ
+## デバッグのコツ
 
 ### ディスク情報の詳細確認
 ```ruby
@@ -359,7 +359,7 @@ devices.each do |dev|
 end
 ```
 
-## 📋 実用的なワンライナー集
+## 実用的なワンライナー集
 
 ```bash
 # ディスク使用率80%以上を検出
@@ -390,7 +390,7 @@ ss -tan | ruby -e 'lines = STDIN.readlines[1..]; states = lines.map { |l| l.spli
 watch -n 5 'df -h | ruby -ne "cols = \$_.split; puts \"\e[31m⚠️ \e[0m#{cols[0]}: #{cols[4]}\" if cols[4] && cols[4].to_i >= 80"'
 ```
 
-## 🎯 高度なテクニック
+## 高度なテクニック
 
 ### 統合監視スクリプト
 ```ruby

@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🔄 Day 6: 複数ファイルの文字列一括置換
+# Day 6: 複数ファイルの文字列一括置換
 
-[![難易度](https://img.shields.io/badge/難易度-🟠%20中級-orange?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-中級-orange?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-25分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: 開発環境から本番環境への移行時、複数の設定ファイルのホスト名やAPIエンドポイントを一括変更する必要がある。
 
@@ -18,11 +18,11 @@
 
 **解決**: Rubyワンライナーで安全・確実に一括置換！
 
-## 📝 課題
+## 課題
 
 複数ファイルの文字列を一括置換し、バックアップ作成、プレビュー機能をワンライナーで実現してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # 開発環境→本番環境への置換
 localhost → production.example.com
@@ -34,7 +34,7 @@ http://dev-api.com → https://api.example.com
 元ファイルは .bak として保存
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | メソッド/機能 | 用途 | 重要度 |
 |--------------|------|--------|
@@ -43,9 +43,9 @@ http://dev-api.com → https://api.example.com
 | `File.write` | ファイル書き込み | ⭐⭐⭐⭐ |
 | `FileUtils.cp` | バックアップ作成 | ⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 1つのファイルの文字列置換から始めましょう：
 
 ```ruby
@@ -64,7 +64,7 @@ File.write("sample_data/config.txt", new_content)
 
 </details>
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. 複数ファイル一括置換</strong></summary>
@@ -109,7 +109,7 @@ content.gsub(/\$\{(\w+)_HOST\}/, 'production-\\1.example.com')
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>安全な一括置換システム</strong></summary>
@@ -118,7 +118,7 @@ content.gsub(/\$\{(\w+)_HOST\}/, 'production-\\1.example.com')
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 🚀 **環境移行** - 開発→ステージング→本番への設定変更
 - 🔧 **リファクタリング** - 変数名・関数名の一括変更

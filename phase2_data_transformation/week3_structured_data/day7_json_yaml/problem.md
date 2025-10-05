@@ -2,7 +2,7 @@
 
 # 🔧 Day 7: JSON/YAML データ変換
 
-[![難易度](https://img.shields.io/badge/難易度-🟡%20初級-yellow?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-初級-yellow?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-25分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: API設定ファイルやKubernetesマニフェストなど、異なる形式のデータを変換する必要がある。
 
@@ -18,11 +18,11 @@
 
 **解決**: Rubyワンライナーで瞬時にデータ変換・操作！
 
-## 📝 課題
+## 課題
 
 JSON/YAMLファイルの読み込み、変換、データ抽出をワンライナーで実現してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # JSON → YAML変換
 users.json → users.yaml
@@ -34,7 +34,7 @@ age >= 30 のユーザーのみ抽出
 user.profile.skills → フラットな配列
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | メソッド/ライブラリ | 用途 | 重要度 |
 |-------------------|------|--------|
@@ -43,9 +43,9 @@ user.profile.skills → フラットな配列
 | `select/reject` | データフィルタリング | ⭐⭐⭐⭐⭐ |
 | `map/flat_map` | データ変換 | ⭐⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 JSON → YAML変換から始めましょう：
 
 ```ruby
@@ -63,7 +63,7 @@ puts YAML.dump(JSON.parse(File.read("sample_data/users.json")))
 
 </details>
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. 条件フィルタリング</strong> - 特定条件のデータのみ抽出</summary>
@@ -98,7 +98,7 @@ users.flat_map { |u| u.dig("profile", "skills") }.compact.uniq
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>設定ファイル管理システム</strong></summary>
@@ -107,7 +107,7 @@ users.flat_map { |u| u.dig("profile", "skills") }.compact.uniq
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 🔧 **API設定ファイル変換** - 開発/本番環境の設定管理
 - ☸️ **Kubernetesマニフェスト操作** - YAML設定の動的生成

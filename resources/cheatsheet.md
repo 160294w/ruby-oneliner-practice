@@ -1,6 +1,6 @@
 # Rubyワンライナー チートシート
 
-## 🎯 基本パターン
+## 基本パターン
 
 ### ファイル・ディレクトリ操作
 
@@ -106,7 +106,7 @@ require 'fileutils'; FileUtils.mkdir_p("backup_#{Time.now.strftime('%Y%m%d_%H%M%
 require 'csv'; CSV.read("data.csv").select { |row| row[2].to_i > 1000 }.each { |row| puts row.join(", ") }
 ```
 
-## 🔧 便利なイディオム
+## 便利なイディオム
 
 ### 条件付き実行
 
@@ -137,7 +137,7 @@ begin; File.read("file.txt"); rescue => e; puts "Error: #{e.message}"; end
 Dir.glob("*.txt").tap { |files| puts "Found #{files.size} files" }.each { |f| puts File.size(f) }
 ```
 
-## 📊 パフォーマンス最適化
+## パフォーマンス最適化
 
 ### ファイル読み込み
 
@@ -157,7 +157,7 @@ Dir.glob("**/*.txt").each { |f| process_file(f) }  # Good
 Dir.glob("**/*.txt").map { |f| process_file(f) }   # Memory intensive
 ```
 
-## 🚫 よくある間違い
+## よくある間違い
 
 ### パス指定ミス
 

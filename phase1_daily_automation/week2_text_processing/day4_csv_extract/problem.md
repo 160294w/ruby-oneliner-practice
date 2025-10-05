@@ -1,8 +1,8 @@
 <div align="center">
 
-# 📊 Day 4: CSVから特定列抽出
+# Day 4: CSVから特定列抽出
 
-[![難易度](https://img.shields.io/badge/難易度-🟡%20初級-yellow?style=flat-square)](#)
+[![難易度](https://img.shields.io/badge/難易度-初級-yellow?style=flat-square)](#)
 [![実用度](https://img.shields.io/badge/実用度-⭐⭐⭐⭐-yellow?style=flat-square)](#)
 [![所要時間](https://img.shields.io/badge/所要時間-20分-blue?style=flat-square)](#)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 実用場面
+## 実用場面
 
 **シチュエーション**: 月次売上レポートから特定部門のデータだけを抽出したい。大きなCSVファイルからExcelで開くのは重い。
 
@@ -18,11 +18,11 @@
 
 **解決**: Rubyワンライナーで瞬時に必要なデータを抽出！
 
-## 📝 課題
+## 課題
 
 CSVファイルから特定の列を抽出し、条件フィルタリングしてレポート生成をワンライナーで実現してください。
 
-### 🎯 期待する処理例
+### 期待する処理例
 ```bash
 # 売上データから営業部のみ抽出
 sales.csv → 営業部の売上一覧
@@ -34,7 +34,7 @@ sales.csv → 営業部の売上一覧
 部門別の売上合計を計算
 ```
 
-## 💡 学習ポイント
+## 学習ポイント
 
 | メソッド/機能 | 用途 | 重要度 |
 |--------------|------|--------|
@@ -43,9 +43,9 @@ sales.csv → 営業部の売上一覧
 | `map` | 列選択・変換 | ⭐⭐⭐⭐ |
 | `group_by/sum` | 集計処理 | ⭐⭐⭐⭐ |
 
-## 🚀 レベル別チャレンジ
+## レベル別チャレンジ
 
-### 🟢 基本レベル
+### 基本レベル
 CSVの基本読み込みと列抽出から始めましょう：
 
 ```ruby
@@ -65,7 +65,7 @@ end
 
 </details>
 
-### 🟡 応用レベル
+### 応用レベル
 
 <details>
 <summary><strong>1. 条件フィルタリング</strong> - 特定部門のみ抽出</summary>
@@ -104,7 +104,7 @@ dept_totals.each { |dept, total| puts "#{dept}: #{total}円" }
 
 </details>
 
-### 🔴 実務レベル
+### 実務レベル
 
 <details>
 <summary><strong>売上分析レポートシステム</strong></summary>
@@ -113,7 +113,7 @@ dept_totals.each { |dept, total| puts "#{dept}: #{total}円" }
 
 </details>
 
-## 📊 実際の業務での使用例
+## 実際の業務での使用例
 
 - 📈 **月次レポート生成** - 部門別売上集計
 - 👥 **顧客分析** - セグメント別データ抽出

@@ -2,7 +2,7 @@
 
 Infrastructure as Codeの運用で実際に使われているTerraformワンライナーを収録しました。
 
-## 🔍 状態管理・監査
+## 状態管理・監査
 
 ### tfstateファイルの分析
 ```ruby
@@ -62,7 +62,7 @@ ruby -e 'env = ENV["DEPLOY_ENV"] || "dev"; puts "🌍 環境: #{env}"; system("t
 ruby -e 'plan_file = "tfplan-#{Time.now.strftime(\"%Y%m%d-%H%M%S\")}"; puts "📋 デプロイプラン生成中..."; system("terraform plan -out=#{plan_file}"); print "🤔 このプランを適用しますか？ (yes/no): "; approval = STDIN.gets.chomp; if approval.downcase == "yes"; system("terraform apply #{plan_file}"); puts "✅ デプロイ完了"; File.delete(plan_file); else; puts "❌ デプロイをキャンセルしました"; end'
 ```
 
-## 🔍 設定ファイル管理
+## 設定ファイル管理
 
 ### HCL設定の構文チェック
 ```ruby
@@ -102,7 +102,7 @@ terraform show -json | ruby -rjson -e 'state = JSON.parse(STDIN.read); iam_polic
 terraform show -json | ruby -rjson -e 'state = JSON.parse(STDIN.read); resources = state["values"]["root_module"]["resources"] || []; s3_buckets = resources.select { |r| r["type"] == "aws_s3_bucket" }; rds_instances = resources.select { |r| r["type"] == "aws_db_instance" }; s3_buckets.each { |bucket| encryption = bucket["values"]["server_side_encryption_configuration"]; puts "S3 #{bucket["name"]}: #{encryption ? "✅暗号化済み" : "❌暗号化なし"}" }; rds_instances.each { |rds| encrypted = rds["values"]["storage_encrypted"]; puts "RDS #{rds["name"]}: #{encrypted ? "✅暗号化済み" : "❌暗号化なし"}" }'
 ```
 
-## 📊 レポート・ドキュメント生成
+## レポート・ドキュメント生成
 
 ### インフラ構成図の生成
 ```ruby
@@ -136,7 +136,7 @@ ruby -e 'if ENV["CI"] == "true"; target_branch = ENV["GITHUB_BASE_REF"] || "main
 ruby -e 'checks = [["terraform validate", "設定ファイル検証"], ["terraform plan", "変更プラン確認"], ["git diff --name-only HEAD~1", "変更ファイル確認"]]; all_passed = true; checks.each { |command, description| puts "⏳ #{description}..."; result = system("#{command} > /dev/null 2>&1"); if result; puts "✅ #{description}: 成功"; else; puts "❌ #{description}: 失敗"; all_passed = false; end }; if all_passed; puts "🚀 本番デプロイ準備完了"; else; puts "🛑 問題があります。デプロイを中止してください"; exit 1; end'
 ```
 
-## 💡 運用ベストプラクティス
+## 運用ベストプラクティス
 
 ### 1. 定期的な状態監査
 ```bash
