@@ -1,6 +1,6 @@
 # Day 20: ヒントとステップガイド
 
-## 🔍 段階的に考えてみよう
+## 段階的に考えてみよう
 
 ### Step 1: GitHub Actions JSONログの基本解析
 ```ruby
@@ -56,7 +56,7 @@ success_rate = (success * 100.0 / total).round(1)
 puts "テスト結果: #{success}/#{total} (#{success_rate}%)"
 ```
 
-## 💡 よく使うパターン
+## よく使うパターン
 
 ### パターン1: エラーメッセージの抽出
 ```ruby
@@ -117,7 +117,7 @@ sorted_steps.first(5).each_with_index do |step, i|
 end
 ```
 
-## 🚫 よくある間違い
+## よくある間違い
 
 ### 間違い1: タイムスタンプのパース忘れ
 ```ruby
@@ -152,7 +152,7 @@ failures = doc.elements["testsuites"].attributes["failures"].to_i
 failures = doc.elements["testsuites"]&.attributes&.[]("failures")&.to_i || 0
 ```
 
-## 🎯 応用のヒント
+## 応用のヒント
 
 ### ビルド失敗の原因別分類
 ```ruby
@@ -221,7 +221,7 @@ def find_bottlenecks(steps, threshold_seconds = 60)
 end
 ```
 
-## 📋 実用的なワンライナー集
+## 実用的なワンライナー集
 
 ```bash
 # GitHub Actions最新runの失敗ステップのみ表示
@@ -237,7 +237,7 @@ jq '.jobs.build.steps[] | select(.status != "skipped") | (.completed_at | fromda
 gh run list --limit 10 --json conclusion | ruby -rjson -e 'runs=JSON.parse(STDIN.read); failed=runs.count{|r| r["conclusion"]=="failure"}; puts "失敗率: #{failed*10}%"'
 ```
 
-## 🔧 デバッグのコツ
+## デバッグのコツ
 
 ### CI/CDログの構造確認
 ```ruby
