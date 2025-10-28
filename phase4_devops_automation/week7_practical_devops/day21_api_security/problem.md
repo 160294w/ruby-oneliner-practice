@@ -189,6 +189,6 @@ ruby -e 'File.readlines("Gemfile.lock").each{|l| puts $1 if l=~/^    (\w+) \(/}'
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

@@ -115,20 +115,20 @@ dept_totals.each { |dept, total| puts "#{dept}: #{total}円" }
 
 ## 実際の業務での使用例
 
-- 📈 **月次レポート生成** - 部門別売上集計
+- **月次レポート生成** - 部門別売上集計
 - 👥 **顧客分析** - セグメント別データ抽出
 - 💰 **予算管理** - 予算超過項目の特定
 - 🔍 **データクレンジング** - 不正データの除外
 
 ## 🎓 次のステップ
 
-- ✅ 基本レベルクリア → [Day 5: ログファイルからエラー行抽出](../day5_log_errors/problem.md)
-- 🔗 関連する実用例 → [CSV高度操作](../../../phase2_data_transformation/week3_structured_data/day8_csv_advanced/problem.md)
+- 基本レベルクリア → [Day 5: ログファイルからエラー行抽出](../day5_log_errors/problem.md)
+- 関連する実用例 → [CSV高度操作](../../../phase2_data_transformation/week3_structured_data/day8_csv_advanced/problem.md)
 
 ---
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

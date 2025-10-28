@@ -53,6 +53,81 @@ ruby solution.rb
 ruby ../../../tools/progress_tracker.rb complete 1 basic
 ```
 
+## Rubyワンライナーの実行方法
+
+Rubyワンライナーは`ruby -e`コマンドで実行します。
+
+### 基本的な実行方法
+
+```bash
+# 文字列を出力
+ruby -e 'puts "Hello, World!"'
+
+# 計算結果を表示
+ruby -e 'puts (1..10).sum'
+
+# ファイルを読み込んで処理
+ruby -e 'puts File.readlines("data.txt").size'
+```
+
+### よく使うオプション
+
+| オプション | 説明 | 使用例 |
+|-----------|------|--------|
+| `-e 'code'` | コードを直接実行 | `ruby -e 'puts "test"'` |
+| `-n` | 各行をループ処理 | `ruby -ne 'print if /error/'` |
+| `-p` | 各行を処理して出力 | `ruby -pe 'gsub(/foo/, "bar")'` |
+| `-l` | 改行を自動削除/追加 | `ruby -lne 'puts $_.upcase'` |
+| `-a` | 自動split（$Fに格納） | `ruby -ane 'puts $F[0]'` |
+| `-i` | ファイルをin-place編集 | `ruby -i.bak -pe 'gsub(/old/, "new")'` |
+| `-r` | ライブラリをrequire | `ruby -rjson -e 'puts JSON.parse(...)'` |
+
+### パイプとの組み合わせ
+
+```bash
+# 標準入力から読み込み
+cat file.txt | ruby -ne 'puts $_ if /error/'
+
+# 他のコマンドと連携
+ls -la | ruby -ane 'puts $F[8] if $F[4].to_i > 1000'
+
+# 複数のパイプ
+grep "error" log.txt | ruby -ne 'puts $_.split[0]' | sort | uniq
+```
+
+### 実用例
+
+```bash
+# ファイルサイズの合計（バイト単位）
+ruby -e 'puts Dir.glob("*").map { |f| File.size(f) }.sum'
+
+# CSVから特定列を抽出
+ruby -rcsv -e 'CSV.read("data.csv").each { |row| puts row[1] }'
+
+# JSONを整形して表示
+ruby -rjson -e 'puts JSON.pretty_generate(JSON.parse(STDIN.read))'
+
+# ログから日時だけ抽出
+ruby -ne 'puts $1 if /^(\d{4}-\d{2}-\d{2})/' access.log
+
+# 複数ファイルの行数カウント
+ruby -e 'puts Dir.glob("*.rb").map { |f| [f, File.readlines(f).size] }.to_h'
+```
+
+### このプロジェクトでの使い方
+
+各Dayのsolution.rbは通常のRubyスクリプトですが、学んだパターンを実際にワンライナーとして使う場合は：
+
+```bash
+# solution.rbの内容を確認
+cat solution.rb
+
+# ワンライナーとして実行（example）
+ruby -e 'puts Dir.glob("*").map { |f| "#{f}: #{File.size(f)}" }'
+
+# 実用ワンライナー例はproblem.mdの最後に記載されています
+```
+
 ## カリキュラム構成
 
 ### Phase 1: 日常業務自動化 (Week 1-2)

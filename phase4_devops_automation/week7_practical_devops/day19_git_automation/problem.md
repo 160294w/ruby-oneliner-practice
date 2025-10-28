@@ -175,6 +175,6 @@ git log --since="30 days ago" --format="%ad" --date=short | ruby -e 'puts STDIN.
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

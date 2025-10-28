@@ -403,18 +403,18 @@ migration.migrate_from_csv(
 - 🔄 **システムリプレース** - 旧システムから新システムへのデータ移行
 - 📊 **データ統合** - 複数のデータソースの統合・正規化
 - 🧹 **データクレンジング** - 不正データの検出・修正・削除
-- 📈 **ETL処理** - Extract, Transform, Load の自動化
+- **ETL処理** - Extract, Transform, Load の自動化
 - 🔍 **データ品質管理** - データ品質の継続的な監視と改善
 
 ## 🎓 次のステップ
 
-- ✅ 基本レベルクリア → [Day 12: パフォーマンス最適化](../day12_performance/problem.md)
-- 🔗 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#データ移行)
+- 基本レベルクリア → [Day 12: パフォーマンス最適化](../day12_performance/problem.md)
+- 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#データ移行)
 
 ---
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

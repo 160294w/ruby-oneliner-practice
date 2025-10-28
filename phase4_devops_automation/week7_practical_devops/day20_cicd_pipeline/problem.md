@@ -182,6 +182,6 @@ gh run view --json jobs | ruby -rjson -e 'data = JSON.parse(STDIN.read); data["j
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

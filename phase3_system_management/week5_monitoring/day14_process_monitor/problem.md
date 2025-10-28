@@ -92,7 +92,7 @@ zombie_processes = `ps aux`.lines.select { |line| line.include?("<defunct>") || 
 
 - 🔍 **リソース監視** - CPU・メモリ使用率の異常検出
 - 🔄 **自動対応** - 暴走プロセスの自動kill、再起動
-- 📈 **傾向分析** - プロセス起動パターンの統計分析
+- **傾向分析** - プロセス起動パターンの統計分析
 - 🚨 **アラート通知** - リソース枯渇の予兆検出
 
 ## 前提条件
@@ -107,6 +107,6 @@ zombie_processes = `ps aux`.lines.select { |line| line.include?("<defunct>") || 
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

@@ -120,19 +120,19 @@ errors.each { |msg, count| puts "#{msg}: #{count}回" }
 ## 実際の業務での使用例
 
 - 🚨 **障害対応** - エラー原因の迅速な特定
-- 📈 **パフォーマンス分析** - 応答時間の遅いリクエスト抽出
+- **パフォーマンス分析** - 応答時間の遅いリクエスト抽出
 - 🔒 **セキュリティ監視** - 不正アクセスの検出
 - 📊 **トレンド分析** - エラー発生傾向の把握
 
 ## 🎓 次のステップ
 
-- ✅ 基本レベルクリア → [Day 6: 複数ファイルの文字列一括置換](../day6_bulk_replace/problem.md)
-- 🔗 関連する実用例 → [ログ分析実践](../../../phase2_data_transformation/week4_text_processing/day10_log_analysis/problem.md)
+- 基本レベルクリア → [Day 6: 複数ファイルの文字列一括置換](../day6_bulk_replace/problem.md)
+- 関連する実用例 → [ログ分析実践](../../../phase2_data_transformation/week4_text_processing/day10_log_analysis/problem.md)
 
 ---
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

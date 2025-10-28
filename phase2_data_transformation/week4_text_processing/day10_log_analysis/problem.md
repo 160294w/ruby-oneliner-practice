@@ -265,19 +265,19 @@ analyzer.report
 
 - 🌐 **Webサイト分析** - トラフィックパターン、人気コンテンツ特定
 - 🚨 **異常検知** - DDoS攻撃、不正アクセスの早期発見
-- 📈 **パフォーマンス監視** - レスポンスタイム、エラー率の追跡
+- **パフォーマンス監視** - レスポンスタイム、エラー率の追跡
 - 🔍 **SEO分析** - 検索エンジンクローラーの活動監視
 - 💰 **コスト最適化** - 転送量の把握、CDN効果測定
 
 ## 🎓 次のステップ
 
-- ✅ 基本レベルクリア → [Day 11: データ移行](../day11_data_migration/problem.md)
-- 🔗 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#ログ分析)
+- 基本レベルクリア → [Day 11: データ移行](../day11_data_migration/problem.md)
+- 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#ログ分析)
 
 ---
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

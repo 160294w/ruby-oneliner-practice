@@ -92,10 +92,10 @@ established = connections.count { |line| line.include?("ESTAB") }
 
 ## 実際の業務での使用例
 
-- 💾 **容量管理** - ディスク容量不足の予防
+- **容量管理** - ディスク容量不足の予防
 - 🔍 **I/O監視** - ディスクボトルネック検出
 - 🌐 **ネットワーク監視** - 異常接続・DDoS検出
-- 📈 **傾向分析** - 容量増加予測、予防保守
+- **傾向分析** - 容量増加予測、予防保守
 
 ## 前提条件
 
@@ -109,6 +109,6 @@ established = connections.count { |line| line.include?("ESTAB") }
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>

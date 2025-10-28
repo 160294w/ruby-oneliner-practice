@@ -188,20 +188,20 @@ puts JSON.pretty_generate(data)
 ## 実際の業務での使用例
 
 - 📧 **メールアドレス収集** - 問い合わせフォームや資料からの自動抽出
-- 🔗 **リンクチェック** - ドキュメント内の全URLを抽出して検証
+- **リンクチェック** - ドキュメント内の全URLを抽出して検証
 - 📞 **顧客データクレンジング** - 電話番号フォーマットの統一
 - 🔍 **ログ監視** - エラーパターンの自動検出とアラート
 - 🌐 **IPアドレス管理** - アクセスログからの不正アクセス検出
 
 ## 🎓 次のステップ
 
-- ✅ 基本レベルクリア → [Day 10: ログ分析](../../week4_text_processing/day10_log_analysis/problem.md)
-- 🔗 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#データ処理分析)
+- 基本レベルクリア → [Day 10: ログ分析](../../week4_text_processing/day10_log_analysis/problem.md)
+- 関連する実用例 → [実世界での使用例](../../../resources/real_world_examples.md#データ処理分析)
 
 ---
 
 <div align="center">
 
-[🏠 メインページに戻る](../../../README.md) | [💡 ヒントを見る](hints.md) | [✅ 解答例を確認](solution.rb)
+[メインページに戻る](../../../README.md) | [ヒントを見る](hints.md) | [解答例を確認](solution.rb)
 
 </div>
